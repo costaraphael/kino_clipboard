@@ -32,5 +32,6 @@ KinoClipboard.new(fn -> "Hello world!" end, label: "Copy to clipboard")
 
 ## License
 
-Copyright 2024 Raphael Costa
+Copyright (c) 2025 Raphael Vidal Costa
 
+Source code is licensed under the [MIT License](LICENSE).
