@@ -7,7 +7,8 @@ defmodule KinoClipboard.MixProject do
       version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -21,7 +22,17 @@ defmodule KinoClipboard.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:kino, "~> 0.10"}
+      {:kino, "~> 0.10"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package do
+    [
+      description: "Kino component that allows you to copy text to the clipboard",
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/costaraphael/kino_clipboard"}
     ]
   end
 end
